@@ -28,7 +28,7 @@ export const App = () => {
 
   return (
     <div>
-      <header>Dogアプリ</header>
+      <header className="header">Dogアプリ</header>
       <img src={dogUrl} alt="dog" />
       <button
         onClick={() =>
