@@ -1,3 +1,22 @@
 .header {
   background-color: #f5f5f5;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+.caption {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.dog-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  border-radius: 8px;
+  flex-grow: 1;
 }
