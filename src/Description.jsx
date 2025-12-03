@@ -7,18 +7,14 @@ export const Description = () => {
   )
 
   async function handleClick() {
-    try {
-      const res = await fetch('https://dog.ceo/api/breeds/image/random')
-
-      if (!res.ok) {
-        throw new Error(`HTTPエラー: ${res.status}`)
-      }
-
-      const json = await res.json()
-      setDogUrl(json.message)
-    } catch (error) {
-      console.error('通信に失敗しました:', error)
-    }
+    fetch('https://dog.ceo/api/breeds/image/random')
+      .then(res => res.json())
+      .then(data => {
+        setDogUrl(data.message)
+      })
+      .catch(error => {
+        console.error('Error fetching DogUrl:', error)
+      })
   }
 
   return (
